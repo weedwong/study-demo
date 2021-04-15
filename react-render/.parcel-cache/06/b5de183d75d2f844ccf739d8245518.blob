@@ -1,0 +1,5 @@
+console.log('1234');
+window.onload = () => {
+  const root  = document.getElementById("root");
+  console.log(root);
+}

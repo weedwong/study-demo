@@ -3,7 +3,7 @@ import React from './hooks/index';
 
 const Counter = () => {
   const [count, setCount] = React.useState(0);
-  const [text, setText] = React.useState('Hello lit-html');
+  const [text, setText] = React.useState('Hello');
   React.useEffect(() => {
     console.log('effect', count, text)
   }, [count, text]);

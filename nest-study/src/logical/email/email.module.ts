@@ -2,22 +2,23 @@ import { EmailController } from './email.controller';
 import { EmailService } from './email.service';
 import { Module } from '@nestjs/common';
 import { MailerModule } from '@nestjs-modules/mailer';
+import Config from '../../../_config';
 
 @Module({
   imports: [
     MailerModule.forRoot({
       transport: {
-        host: 'smtp.qq.com',
+        host: Config.email.host,
         port: '25', // 456 是加密端口
         ignoreTLS: true,
         secure: false,
         auth: {
-          user: '1878248380@qq.com',
-          pass: 'iymazoqhwdbhceeb',
+          user: Config.email.user,
+          pass: Config.email.pass,
         },
       },
       defaults: {
-        from: '"子弹便签" <1878248380@qq.com>',
+        from: `"子弹便签" <${Config.email.user}>`,
       },
       preview: false,
     }),

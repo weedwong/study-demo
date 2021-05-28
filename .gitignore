@@ -1,6 +1,7 @@
 .parcel-cache
 node_modules
 dist
+_config.ts
 
 # Logs
 logs
